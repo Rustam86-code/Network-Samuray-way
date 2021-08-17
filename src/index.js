@@ -16,7 +16,7 @@ let rerenderEntireTree = (state) =>{
     </BrowserRouter>, document.getElementById('root'));
 }
 
-rerenderEntireTree(store.getState());
+rerenderEntireTree(store);
 serviceWorker.unregister();
 store.subscribe(rerenderEntireTree);
 // If you want your app to work offline and load faster, you can change

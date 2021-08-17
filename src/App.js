@@ -17,13 +17,13 @@ debugger;
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/profile' render={()=> <Profile stateProfile={props.state.profilePage}
+                    <Route path='/profile' render={()=> <Profile stateProfile={props.store}
                                                                  dispatch={props.dispatch} />}/>
                     <Route path='/dialogs' render={()=> <Dialogs stateDialogs={props.store} />}/>
                     <Route path='/news' component={News}/>
                     <Route path='settings' component={Settings}/>
                     <Route path='music' component={Music}/>
-                    <Route path='/sidebar' render={()=> <Sidebar stateSidebar={props.state.sidebar}/>}/>
+                    <Route path='/sidebar' render={()=> <Sidebar stateSidebar={props.store}/>}/>
                 </div>
             </div>
     );
