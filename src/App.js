@@ -1,16 +1,31 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import Profile from './components/Profile';
+import Header from './components/Header/Header';
+import Navbar from './components/NavBar/Navbar';
+import Profile from './components/Profile/Profile';
+import Music from "./components/Music/Music";
+import News from "./components/News/News";
+import Settings from "./components/Settings/Settings";
+import {Route} from "react-router-dom";
+import Dialogs from "./components/Dialogs/Dialogs";
+import Sidebar from './components/Sidebar/Sidebar';
 
-const App = () => {
-  return (
-    <div className='app-wrapper'>
-      <Header />
-      <Navbar />
-      <Profile />
-    </div>);
+const App = (props) => {
+debugger;
+    return (
+            <div className='app-wrapper'>
+                <Header/>
+                <Navbar/>
+                <div className='app-wrapper-content'>
+                    <Route path='/profile' render={()=> <Profile stateProfile={props.state.profilePage}
+                                                                 dispatch={props.dispatch} />}/>
+                    <Route path='/dialogs' render={()=> <Dialogs stateDialogs={props.store} />}/>
+                    <Route path='/news' component={News}/>
+                    <Route path='settings' component={Settings}/>
+                    <Route path='music' component={Music}/>
+                    <Route path='/sidebar' render={()=> <Sidebar stateSidebar={props.state.sidebar}/>}/>
+                </div>
+            </div>
+    );
 }
-
 export default App;

@@ -1,0 +1,39 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding: 30px;
+    text-decoration: none;
+
+
+}
+
+.dialogsItem {
+    text-decoration: none;
+
+}
+
+.dialogsItem a.active{
+    color:gold;
+    text-decoration: none;
+}
+
+.dialog {
+    font-family: "Arial Black";
+    text-decoration-line: none;
+    font-size: large;
+    color: red;
+    padding: 5px;
+
+}
+
+.messages {
+
+}
+
+.message{
+    font-family: "Calibri Light";
+    font-size: large;
+    font-style: italic;
+    padding: 5px;
+
+}
