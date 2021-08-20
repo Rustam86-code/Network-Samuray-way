@@ -15,7 +15,9 @@ const ConteinerDialogs = (props) => {
         state.dispatch(sendNewMessageBodyCreator(body));
     };
     debugger;
-    return (<Dialogs dialogsState={state}
+    return (<Dialogs dialogs={state.reducerDialogs.dialogs}
+                     messages={state.reducerDialogs.messages}
+                     newMessageBody={state.reducerDialogs.newMessageBody}
                      onMessageClick={onMessageClick}
                      onNewMessageChange={onNewMessageChange}/>)
 }

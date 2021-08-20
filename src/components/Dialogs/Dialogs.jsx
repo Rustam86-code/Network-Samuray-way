@@ -8,12 +8,12 @@ import {addMessageCreator, sendNewMessageBodyCreator} from "../../Redux/ReducerD
 const Dialogs = (props) => {
 
 debugger;
-    let dialogsElements = props.dialogsState.dialogs.map( d =>
+    let dialogsElements = props.dialogs.map( d =>
         <DialogsItem name={d.name} id={d.id}/>);
-    let messagesElements = props.dialogsState.messages.map(m =>
+    let messagesElements = props.messages.map(m =>
         <Message message={m.message} />);
 
-    let newMessageBody= props.dialogsState.newMessageBody;
+    let newMessageBody= props.newMessageBody;
 
     let onMessageClick = () =>{
         props.onMessageClick(addMessageCreator());
@@ -47,3 +47,4 @@ debugger;
     )
 }
 export default Dialogs;
+//TODO maintaining add messages and foad data ;

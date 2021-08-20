@@ -4,7 +4,6 @@ const ADD_MESSAGE = 'ADD_MESSAGE';
 const SEND_NEW_MESSAGE_BODY = 'SEND_NEW_MESSAGE_BODY';
 
 let initialState = {
-    dialogsPage: {
         dialogs: [
             {id: 0, name: 'Rustam'},
             {id: 1, name: 'Olga'},
@@ -23,7 +22,7 @@ let initialState = {
             {id: 5, message: 'Yo'},
             {id: 6, message: 'Yo'}
         ],
-        newMessageBody:'fffff'}
+        newMessageBody:'fffff'
 };
 
 const reducerDialogs = (state = initialState,action) => {
