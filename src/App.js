@@ -9,6 +9,7 @@ import Settings from "./components/Settings/Settings";
 import {Route} from "react-router-dom";
 import Dialogs from "./components/Dialogs/Dialogs";
 import Sidebar from './components/Sidebar/Sidebar';
+import ConteinerDialogs from "./components/Dialogs/ContenerDialogs";
 
 const App = (props) => {
 debugger;
@@ -17,9 +18,8 @@ debugger;
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/profile' render={()=> <Profile stateProfile={props.store}
-                                                                 dispatch={props.dispatch} />}/>
-                    <Route path='/dialogs' render={()=> <Dialogs stateDialogs={props.store} />}/>
+                    <Route path='/profile' render={()=> <Profile stateProfile={props.state} />}/>
+                    <Route path='/dialogs' render={()=> <ConteinerDialogs stateDialogs={props.state} />}/>
                     <Route path='/news' component={News}/>
                     <Route path='settings' component={Settings}/>
                     <Route path='music' component={Music}/>

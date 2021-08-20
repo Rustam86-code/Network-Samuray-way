@@ -2,11 +2,11 @@ import reducerDialogs from "./ReducerDialogs";
 import reducerProfile from "./ReducerProfile";
 import reducerSidebar from "./ReducerSidebar";
 
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-
-const ADD_MESSAGE = 'ADD_MESSAGE';
-const SEND_NEW_MESSAGE_BODY = 'SEND_NEW_MESSAGE_BODY';
+// const ADD_POST = 'ADD-POST';
+// const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+//
+// const ADD_MESSAGE = 'ADD_MESSAGE';
+// const SEND_NEW_MESSAGE_BODY = 'SEND_NEW_MESSAGE_BODY';
 debugger;
 let store = {
     _state: {
@@ -63,12 +63,12 @@ let store = {
         this._callSubscriber(this._state);
     }
 }
-export const addPostActionCreator = () => ({type: ADD_POST})
-export const updateNewPostTextActionCreator = (text) =>
-    ({type: UPDATE_NEW_POST_TEXT, newText: text})
+// export const addPostActionCreator = () => ({type: ADD_POST})
+// export const updateNewPostTextActionCreator = (text) =>
+//     ({type: UPDATE_NEW_POST_TEXT, newText: text})
 
-export const addMessageCreator = () => ({type: ADD_MESSAGE})
-export const sendNewMessageBodyCreator = (body) =>
-    ({type: SEND_NEW_MESSAGE_BODY, body: body})
+// export const addMessageCreator = () => ({type: ADD_MESSAGE})
+// export const sendNewMessageBodyCreator = (body) =>
+//     ({type: SEND_NEW_MESSAGE_BODY, body: body})
 
 export default store;
