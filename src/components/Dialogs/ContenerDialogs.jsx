@@ -4,15 +4,15 @@ import Dialogs from "./Dialogs";
 
 
 const ConteinerDialogs = (props) => {
-    debugger;
+
 
     let state= props.stateDialogs.getState();
-
+    debugger;
     let onMessageClick = () =>{
-        state.dispatch(addMessageCreator());
+        props.stateDialogs.dispatch(sendNewMessageBodyCreator());
     };
     let onNewMessageChange = (body) =>{
-        state.dispatch(sendNewMessageBodyCreator(body));
+        props.stateDialogs.dispatch(addMessageCreator(body));
     };
     debugger;
     return (<Dialogs dialogs={state.reducerDialogs.dialogs}
