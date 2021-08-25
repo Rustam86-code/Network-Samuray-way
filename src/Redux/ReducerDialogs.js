@@ -26,7 +26,7 @@ let initialState = {
 };
 
 const reducerDialogs = (state = initialState,action) => {
-debugger;
+
     switch (action.type) {
         case ADD_MESSAGE:
              state.newMessageBody = action.body;
