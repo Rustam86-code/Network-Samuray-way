@@ -7,7 +7,6 @@ import Music from "./components/Music/Music";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
 import {Route} from "react-router-dom";
-import Dialogs from "./components/Dialogs/Dialogs";
 import Sidebar from './components/Sidebar/Sidebar';
 import ConteinerDialogs from "./components/Dialogs/ContenerDialogs";
 

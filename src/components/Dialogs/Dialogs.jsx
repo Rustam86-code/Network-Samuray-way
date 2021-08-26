@@ -7,20 +7,21 @@ import {addMessageCreator, sendNewMessageBodyCreator} from "../../Redux/ReducerD
 
 const Dialogs = (props) => {
 
-debugger;
+
     let dialogsElements = props.dialogs.map( d =>
-        <DialogsItem name={d.name} id={d.id}/>);
+        <DialogsItem name={d.name} key={d.id} id={d.id}/>);
+    debugger;
     let messagesElements = props.messages.map(m =>
-        <Message message={m.message} />);
+        <Message message={m.message} key={m.id} />);
 
     let newMessageBody= props.newMessageBody;
 
-    let onMessageClick = () =>{
-        props.onMessageClick(addMessageCreator());
+    let onMessageClick = (e) =>{
+        let body = e.target.value;
+        props.onNewMessageChange(sendNewMessageBodyCreator(body));
     };
-    let onNewMessageChange = (e) =>{
-       let body = e.target.value;
-       props.onNewMessageChange(sendNewMessageBodyCreator(body));
+    let onNewMessageChange = () =>{
+        props.onMessageClick(addMessageCreator());
     };
 
     return (
