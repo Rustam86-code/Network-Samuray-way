@@ -24,13 +24,13 @@ let initialState = {
 };
 
 const reducerDialogs = (state = initialState, action) => {
-
+debugger;
     switch (action.type) {
         case ADD_MESSAGE: {
             return  {...state, newMessageBody: action.body};
         };
 
-
+            debugger;
         case SEND_NEW_MESSAGE_BODY: {
             let body = state.newMessageBody;
             return {
@@ -44,8 +44,8 @@ const reducerDialogs = (state = initialState, action) => {
     }
 }
 
-export const addMessageCreator = () => ({type: ADD_MESSAGE})
+export const addMessageCreator = () => ({type: SEND_NEW_MESSAGE_BODY})
 export const sendNewMessageBodyCreator = (body) =>
-    ({type: SEND_NEW_MESSAGE_BODY, body: body})
+    ({type: ADD_MESSAGE, body: body})
 
 export default reducerDialogs;

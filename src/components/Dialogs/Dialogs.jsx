@@ -16,12 +16,13 @@ const Dialogs = (props) => {
 
     let newMessageBody= props.newMessageBody;
 
-    let onMessageClick = (e) =>{
-        let body = e.target.value;
-        props.onNewMessageChange(sendNewMessageBodyCreator(body));
+    let onMessageClick = () =>{
+        props.onMessageClick();
+
     };
-    let onNewMessageChange = () =>{
-        props.onMessageClick(addMessageCreator());
+    let onNewMessageChange = (e) =>{
+        let body = e.target.value;
+        props.onNewMessageChange(body);
     };
 
     return (

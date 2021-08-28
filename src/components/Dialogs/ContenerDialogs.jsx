@@ -7,7 +7,8 @@ import {addMessageCreator, sendNewMessageBodyCreator} from "../../Redux/ReducerD
 const mapStateToProps = (reduxStore) => {
     return {
         dialogs: reduxStore.reducerDialogs.dialogs,
-        messages: reduxStore.reducerDialogs.messages
+        messages: reduxStore.reducerDialogs.messages,
+        newMessageBody: reduxStore.reducerDialogs.newMessageBody
 
     }
 }
