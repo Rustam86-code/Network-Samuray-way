@@ -9,6 +9,7 @@ import Settings from "./components/Settings/Settings";
 import {Route} from "react-router-dom";
 import Sidebar from './components/Sidebar/Sidebar';
 import ConteinerDialogs from "./components/Dialogs/ContenerDialogs";
+import ConteinerUsers from './components/Users/ConteinerUsers';
 
 const App = (props) => {
 
@@ -19,10 +20,12 @@ const App = (props) => {
                 <div className='app-wrapper-content'>
                     <Route path='/profile' render={()=> <Profile stateProfile={props.state} />}/>
                     <Route path='/dialogs' render={()=> <ConteinerDialogs />}/>
-                    <Route path='/news' component={News}/>
-                    <Route path='settings' component={Settings}/>
-                    <Route path='music' component={Music}/>
-                    <Route path='/sidebar' render={()=> <Sidebar stateSidebar={props.store}/>}/>
+                    <Route path='/ConteinerUsers' render={()=> <ConteinerUsers />}/>
+                    <Route path='/news' render={News}/>
+                    <Route path='/settings' render={Settings}/>
+                    <Route path='/music' render={Music}/>
+                    <Route path='/sidebar' render={()=>
+                        <Sidebar stateSidebar={props.state}/>}/>
                 </div>
             </div>
     );

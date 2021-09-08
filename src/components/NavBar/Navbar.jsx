@@ -3,7 +3,7 @@ import s from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 
 
-const Navbar = (props) => {
+const Navbar = () => {
     return <nav className={s.nav}>
         <div className={`${s.item} ${s.active}`}>
             <NavLink to="/Profile" activeClassName={s.active}>Profile</NavLink>
@@ -22,6 +22,9 @@ const Navbar = (props) => {
         </div>
         <div className={`${s.item} ${s.active} ${s.itemF}`}>
             <NavLink to="/Sidebar" activeClassName={s.active}>Friends</NavLink>
+        </div>
+        <div className={`${s.item} ${s.active} ${s.itemF}`}>
+            <NavLink to="/ConteinerUsers" activeClassName={s.active}>Users</NavLink>
         </div>
     </nav>
 }
