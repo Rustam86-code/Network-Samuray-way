@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './user.module.css';
 
 
 const Users = (props) => {
@@ -6,10 +7,12 @@ const Users = (props) => {
         {props.users.map(u => <div key={u.id}>
           <span>
               <div>
-              <img src="https://iconarchive.com/show/free-space-icons-by-goodstuff-no-nonsense/rick-icon.html"/>
+              <img src={u.photoUrl} className={style.userPhoto}/>
               </div>
               <div>
-                  <button>Follow</button>
+                  {u.followed
+                      ? <button onClick={()=> {props.unfollow(u.id)}}>Unfollow</button>
+                      :<button onClick={()=> {props.follow(u.id)}}>Follow</button>}
               </div>
           </span>
             <span>

@@ -7,9 +7,12 @@ const SET_USERS = 'SET_USERS';
 
 let initialState = {
     users: [
-        {id: 0, followed: false, fullName: 'Rustam', status: 'Hi, how are you?', location:{country: 'Kazakhstan', city: 'Rudnyy'}},
-        {id: 1, followed: true, fullName: 'Sergei', status: 'Hey Rustam! ', location:{country: 'Kazakhstan', city: 'Rudnyy'}},
-        {id: 2, followed: false, fullName: 'Adele', status: 'What happened?', location:{country: 'Kazakhstan', city: 'Rudnyy'}},
+        {id: 0, photoUrl:"https://iconarchive.com/show/free-space-icons-by-goodstuff-no-nonsense/rick-icon.html",
+            followed: false, fullName: 'Rustam', status: 'Hi, how are you?', location:{country: 'Kazakhstan', city: 'Rudnyy'}},
+        {id: 1, photoUrl:"https://iconarchive.com/show/free-space-icons-by-goodstuff-no-nonsense/rick-icon.html",
+            followed: true, fullName: 'Sergei', status: 'Hey Rustam! ', location:{country: 'Kazakhstan', city: 'Rudnyy'}},
+        {id: 2, photoUrl:"https://iconarchive.com/show/free-space-icons-by-goodstuff-no-nonsense/rick-icon.html"
+            ,followed: false, fullName: 'Adele', status: 'What happened?', location:{country: 'Kazakhstan', city: 'Rudnyy'}},
     ],
     newUser: 'ffffff'
 };
